@@ -1,45 +1,43 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Keyboard not found</title>
-        <style>
-            html, body {
-                margin: 0;
-                padding: 0;
-            }
-            body {
-                background-color: #000000;
-                color: #FFFFFF;
-                font-family: monospace;
-                padding: 10px 10px;
-            }
+<html lang="en-US">
+	<!-- 
+		me: no one will ever view the source of this joke website
+		people: view the source of this joke website
+		me:
+		⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+		⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+		⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+		⣿⣿⣿⣿⣿⡏⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿
+		⣿⣿⣿⣿⣿⣿⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉⠁⠀⣿
+		⣿⣿⣿⣿⣿⣿⣧⡀⠀⠀⠀⠀⠙⠿⠿⠿⠻⠿⠿⠟⠿⠛⠉⠀⠀⠀⠀⠀⣸⣿
+		⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿
+		⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣴⣿⣿⣿⣿
+		⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⢰⣹⡆⠀⠀⠀⠀⠀⠀⣭⣷⠀⠀⠀⠸⣿⣿⣿⣿
+		⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠈⠉⠀⠀⠤⠄⠀⠀⠀⠉⠁⠀⠀⠀⠀⢿⣿⣿⣿
+		⣿⣿⣿⣿⣿⣿⣿⣿⢾⣿⣷⠀⠀⠀⠀⡠⠤⢄⠀⠀⠀⠠⣿⣿⣷⠀⢸⣿⣿⣿
+		⣿⣿⣿⣿⣿⣿⣿⣿⡀⠉⠀⠀⠀⠀⠀⢄⠀⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⣿⣿⣿
+		⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿
+		⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿
 
-            #credits {
-                display: none;
-            }
-        </style>
+		no, seriously, thank you for viewing the source of this joke website
+		and if you like this, please look at my other works at
+		https://thisisnotarealwebsite.com
+		this site was made with <3 by jamie murphy.
+	-->
+    <head>
+    	<meta charset="utf-8">
+        <title>Keyboard not found</title>
+        
+        <meta name="author" content="Jamie Murphy">
+        <meta name="description" content="Keyboard not found Press F1 to continue,DEL to enter Setup">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <p>Keyboard not found</p>
-        <p>Press <strong>F1</strong> to continue,<strong>DEL</strong> to enter Setup</p>
-        <p id="credits">Site currently under construction. Please check back soon!</p>
-        <script>
-            addEvent(document, "keypress", function (e) {
-                e = e || window.event;
-                if (e.keyCode == "112" | "46") {
-                    document.getElementById('credits').style.display = 'block'
-                }
-            });
-
-            function addEvent(element, eventName, callback) {
-                if (element.addEventListener) {
-                    element.addEventListener(eventName, callback, false);
-                } else if (element.attachEvent) {
-                    element.attachEvent("on" + eventName, callback);
-                } else {
-                    element["on" + eventName] = callback;
-                }
-            }
-        </script>
+    	<p>Keyboard not found</p>
+    	<p>Press <strong>F1</strong> to continue,<strong>DEL</strong> to enter Setup.</p>
+    	<!-- The fun starts here -->
+    	<p id="youfoundit">THERE IT IS!</p>
+    	<script src="main.js"></script>
+    	<script src="confetti.js"></script>
     </body>
 </html>
