@@ -18,13 +18,15 @@ function addEvent(element, eventName, cb) {
 
 // Detect F1, Del, and F + 1 keyboard presses
 let keys = {}
+
 // Let's handle F + 1 at the same time
 onkeydown = onkeyup = function (e) {
 	e = e || window.event
-	keys[e.keyCode] = e.type == 'keydown'
-	if (keys[70] && keys[49]) {
+	keys[e.key] = e.type == 'keydown'
+	if (keys['f'] && keys['1'] || keys['F1'] || keys['Delete']) {
 		document.getElementById('youfoundit').style.display = 'block'
-		const DURATION = 8000, LENGTH = 100;
+
+		const DURATION = 4000, LENGTH = 100;
 
   		new Confetti({
     		width    : window.innerWidth,
@@ -32,5 +34,14 @@ onkeydown = onkeyup = function (e) {
     		length   : LENGTH,
     		duration : DURATION
   		});
+
+        setTimeout(() => {
+            var container = document.body
+            var elements = container.getElementsByClassName("confettiContainer")
+
+            while (elements[0]) {
+                elements[0].parentNode.removeChild(elements[0])
+            }
+        }, DURATION)
 	}
 }
