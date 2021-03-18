@@ -11,6 +11,10 @@ body {
 	padding: 10px 10px;
 }
 
+sup {
+    font-size: 10px;
+}
+
 canvas {
 	display: block;
 	position: absolute;
@@ -21,4 +25,29 @@ canvas {
 
 #youfoundit {
 	display: none;
+}
+
+/* Tooltip (to let people know to press F+1) */
+.tooltip {
+    position: relative;
+    display: inline-flex;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
